@@ -13,8 +13,10 @@ export default function App() {
 
   // We wrap the fetch logic in a function so we can reuse it!
   const fetchDatabase = () => {
-    fetch('http://localhost:5000/api/tools')
+    // Replace localhost with your live Render URL
+    fetch('https://mark-1-mcl9.onrender.com/api/tools') 
       .then((response) => response.json())
+      // ...
       .then((data) => setDatabase(data))
       .catch((error) => console.error("Error fetching data:", error));
   };

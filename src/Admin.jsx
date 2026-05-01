@@ -25,8 +25,10 @@ export default function Admin({ database, refreshDatabase }) {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/tools', {
-        method: 'POST',
+        // Update this URL
+        const response = await fetch('https://mark-1-mcl9.onrender.com/api/tools', {
+          method: 'POST',
+  //...
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newTool)
       });
@@ -48,8 +50,10 @@ export default function Admin({ database, refreshDatabase }) {
     if (!window.confirm(`Are you sure you want to delete ${toolName}?`)) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/tools/${toolName}`, {
-        method: 'DELETE'
+        // Update this URL (Make sure to keep the backticks ` ` and the ${toolName} variable!)
+        const response = await fetch(`https://mark-1-mcl9.onrender.com/api/tools/${toolName}`, {
+          method: 'DELETE'
+  //...
       });
 
       if (response.ok) {
